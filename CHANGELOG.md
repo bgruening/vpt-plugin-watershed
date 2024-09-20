@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.2 (2024-09-20)
+
+### Fix
+
+* Support MERSCOPE Ultra ([#2](https://github.com/Vizgen/vpt-plugin-watershed/issues/2)) ([`294bfcb`](https://github.com/Vizgen/vpt-plugin-watershed/commit/294bfcb3749a1a3149a793d94d92ffedecd79616))
+
 ## v1.0.1 (2024-02-08)
 
 
