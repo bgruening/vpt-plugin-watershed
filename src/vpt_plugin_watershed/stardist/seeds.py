@@ -74,7 +74,7 @@ class StardistSeedsExtractor:
         target = np.zeros(shape, dtype=np.uint8)
 
         for star in results:
-            triangles = []
+            triangles: List[np.ndarray] = []
             center = star.center
             points = star.points
 
@@ -84,8 +84,8 @@ class StardistSeedsExtractor:
                 i2 = (i1 + 2) % len(points[0])
                 p1 = np.array([points[1][i1], points[0][i1]]) - c
                 p2 = np.array([points[1][i2], points[0][i2]]) - c
-                triangles.append([p1 * star_scale + c, p2 * star_scale + c, c])
-            cv2.fillPoly(target, np.array(triangles, dtype=np.int32), (255, 255, 255))
+                triangles.append(np.array([p1 * star_scale + c, p2 * star_scale + c, c], dtype=np.int32))
+            cv2.fillPoly(target, triangles, (255, 255, 255))
         return target != 0
 
     def extract_seeds(self, seed_images: np.ndarray, entity: Entity) -> Tuple[List[StardistResult], np.ndarray]:
