@@ -28,7 +28,7 @@ packages = [{ include = "vpt_plugin_watershed", from = "src" }]
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
 numba = ">=0.59.0,<0.60.0"
-numpy = ">=1.26.4,<2.0.0"
+numpy = ">=1.26.4"
 opencv-python-headless = ">=4.9.0.80,<4.10.0"
 pandas = ">=2.0.3"
 pyclustering = ">=0.10.1.2"
